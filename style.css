@@ -1,0 +1,32 @@
+
+.ralign{
+    text-align: right;
+}
+
+.mainpic {
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px grey;
+    width: 80%;
+    height: 550px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 75px;
+    color: #F5E6CC;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+body{
+    background-color: #FAF3E0;
+}
+.formwidth{
+    width: 50%;
+    margin: auto;
+}
