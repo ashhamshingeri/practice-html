@@ -25,15 +25,19 @@
             <ul class="nav nav-underline justify-content-center flex-grow-1">
                 <!-- Home -->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <!-- Contact -->
                 <li class="nav-item">
-                    <a class="nav-link text-success-emphasis" href="#">Contact</a>
+                    <a class="nav-link text-success-emphasis" href="contact.html">Contact</a>
                 </li>
                 <!-- About -->
                 <li class="nav-item">
-                    <a class="nav-link text-success-emphasis" href="">About</a>
+                    <a class="nav-link text-success-emphasis" href="about.html">About</a>
+                </li>
+                <!-- Order -->
+                <li class="nav-item">
+                    <a class="nav-link text-success-emphasis" href="order.html">Order</a>
                 </li>
                 <!-- Search Bar -->
                 <form class="d-flex" role="search">
@@ -43,38 +47,81 @@
             </ul>
             <!-- Login and Sign Up Button -->
             <div class="d-flex">
-                <a class="btn btn-success me-1" href="#">Login</a>
-                <a class="btn btn-success" href="#">Sign Up</a>
+                <a class="btn btn-success me-1" href="login.html">Login</a>
+                <a class="btn btn-success" href="signup.html">Sign Up</a>
             </div>
         </div>
     </nav>
+    <!-- Order Section -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <!-- Order Form -->
+            <div class="col-lg-7">
+                <form action="order_success.html" method="post" class="p-4 border border-3 rounded-3 bg-light shadow">
+                    <h2 class="mb-4 text-success" style="font-family: Changa One;">Place Your Order</h2>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="order" class="form-label">Select Your Items</label>
+                        <select class="form-select" id="order" name="order[]" multiple required>
+                            <option value="Espresso">Espresso</option>
+                            <option value="Cappuccino">Cappuccino</option>
+                            <option value="Latte">Latte</option>
+                            <option value="Mocha">Mocha</option>
+                            <option value="Croissant">Croissant</option>
+                            <option value="Muffin">Muffin</option>
+                            <option value="Sandwich">Sandwich</option>
+                        </select>
+                        <small class="text-muted">Hold Ctrl (Windows) or Command (Mac) to select multiple items.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" min="1" max="20"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Special Requests</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3"
+                            placeholder="Any allergies, preferences, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit Order</button>
+                </form>
+            </div>
+            <!-- Order Info Card -->
+            <div class="col-lg-5 d-flex align-items-center">
+                <div class="card shadow w-100 mt-4 mt-lg-0">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-3" style="font-family: Changa One;">Why Order With Us?</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><span class="text-success">&#9749;</span> Freshly brewed coffee</li>
+                            <li class="mb-2"><span class="text-success">&#127849;</span> Homemade pastries</li>
+                            <li class="mb-2"><span class="text-success">&#128666;</span> Fast & friendly service</li>
+                            <li class="mb-2"><span class="text-success">&#127968;</span> Local ingredients</li>
+                        </ul>
+                        <img src="Images/order-coffee.jpg" alt="Order Coffee" class="img-fluid rounded mt-3"
+                            style="max-height: 180px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Order Page -->
-    <div class="container my-5 text">
-        <h2 class="text-center mb-4" style="font-family: Changa One;">Place Your Order</h2>
-        <form action="#" method="post">
-            <div class="mb-3 formwidth">
-                <label for="name" class="form-label ">Full Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="mb-3 formwidth">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3 formwidth">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
-            </div>
-            <div class="mb-3 formwidth">
-                <label for="address" class="form-label">Delivery Address</label>
-                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
-            </div>
-            <div class="mb-3 formwidth">
-                <label for="orderDetails" class="form-label">Order Details</label>
-                <textarea class="form-control" id="orderDetails" name="orderDetails" rows="5"
-                    placeholder="List your items here..." required></textarea>
-            </div>
-            <div class="mb-3  text-center">
-                <button type="submit" class="btn btn-success ">Submit Order</button>
-            </div>
-        </form>
+    <!-- Footer -->
+    <footer class="bg-success text-white text-center py-3">
+        <div class="container">
+            &copy; 2025 My Cafe. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
